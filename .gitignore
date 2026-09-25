@@ -1,0 +1,5 @@
+.DS_Store
+Thumbs.db
+
+# Fotos originales sin procesar (las usadas en el sitio viven en assets/gallery)
+/img/

@@ -1,0 +1,602 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>El 142 Auxilios — Auxilio y remolque en CABA, las 24 horas</title>
+<meta name="description" content="Grúas y auxilio vial en toda la Ciudad Autónoma de Buenos Aires y el Gran Buenos Aires. Base en Barracas. Atención las 24 horas. 4.9★ en Google con 13 opiniones.">
+<meta property="og:title" content="El 142 Auxilios — Auxilio y remolque en CABA">
+<meta property="og:description" content="Acarreo, auxilio mecánico y traslado de vehículos livianos en toda CABA y el GBA, las 24 horas.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/logo.png">
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --red:#DE1B1B;
+  --red-dark:#A81212;
+  --ink:#151312;
+  --ink-soft:#3A3532;
+  --paper:#FBF8F4;
+  --paper-alt:#F2EBE2;
+  --line:#E6DDD0;
+  --muted:#726B62;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:'Manrope',sans-serif;background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'Anton',sans-serif;font-weight:400;letter-spacing:.01em;margin:0;text-transform:uppercase}
+p{margin:0}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+button{font-family:inherit}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:'Manrope',sans-serif;font-weight:800;font-size:16px;padding:16px 28px;border-radius:8px;cursor:pointer;border:2px solid transparent;line-height:1;white-space:nowrap}
+.btn-primary{background:var(--red);color:#fff}
+.btn-primary:hover{background:var(--red-dark)}
+.btn-outline-dark{background:transparent;color:var(--ink);border-color:var(--ink)}
+.btn-outline-dark:hover{background:var(--ink);color:#fff}
+.btn-outline-light{background:transparent;color:#fff;border-color:rgba(255,255,255,.6)}
+.btn-outline-light:hover{background:#fff;color:var(--ink)}
+.section{padding:96px 32px}
+.section-inner{max-width:1180px;margin:0 auto}
+.eyebrow{font-weight:800;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
+.chip{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);border-radius:100px;padding:10px 18px;font-weight:700;font-size:14px}
+.star{fill:var(--red)}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px}
+
+/* FAQ */
+.faq-answer{display:none;padding:0 22px 22px;font-size:15px;color:var(--muted);line-height:1.55}
+.faq-item.is-open .faq-answer{display:block}
+.faq-item.is-open .faq-chevron{transform:rotate(180deg)}
+.faq-chevron{transition:transform .2s ease}
+
+/* Reviews */
+.review-extra{display:none}
+.reviews-grid.show-all .review-extra{display:flex}
+
+/* Gallery */
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.gallery-item{position:relative;border-radius:14px;overflow:hidden;cursor:pointer;aspect-ratio:4/3;border:1px solid var(--line)}
+.gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .3s ease}
+.gallery-item:hover img{transform:scale(1.06)}
+.gallery-item .gallery-label{position:absolute;left:0;right:0;bottom:0;padding:10px 14px;background:linear-gradient(transparent,rgba(0,0,0,.65));color:#fff;font-size:13px;font-weight:700}
+#lightbox{display:none;position:fixed;inset:0;background:rgba(10,8,7,.92);z-index:100;align-items:center;justify-content:center;padding:24px}
+#lightbox.is-open{display:flex}
+#lightbox img{max-width:min(90vw,900px);max-height:85vh;border-radius:10px}
+#lightbox-close{position:absolute;top:20px;right:24px;width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.12);border:none;color:#fff;font-size:22px;cursor:pointer}
+
+@media (max-width:900px){
+  .section{padding:64px 20px}
+  .grid-3{grid-template-columns:1fr !important}
+  .grid-4{grid-template-columns:1fr 1fr !important}
+  .hero-grid{grid-template-columns:1fr !important}
+  .cov-grid{grid-template-columns:1fr !important}
+  .gallery-grid{grid-template-columns:1fr 1fr !important}
+  h1{font-size:44px !important}
+  .nav-links{display:none !important}
+}
+</style>
+</head>
+<body>
+
+<div style="width: 100%; min-height: 100vh; display: flex; flex-direction: column; background: var(--paper); overflow-x: hidden; position: relative;">
+
+<header style="position: sticky; top: 0; z-index: 50; background: rgba(251,248,244,0.93); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line);">
+  <div style="max-width: 1180px; margin: 0 auto; padding: 14px 32px; display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+    <a href="#top" aria-label="El 142 Auxilios — inicio" style="display: flex; align-items: center; gap: 10px;">
+      <img src="assets/logo.png" alt="El 142 Auxilios" style="height: 44px; width: auto; display: block;">
+    </a>
+    <nav class="nav-links" style="display: flex; align-items: center; gap: 32px; font-weight: 700; font-size: 15px;">
+      <a href="#servicios">Servicios</a>
+      <a href="#galeria">Galería</a>
+      <a href="#cobertura">Cobertura</a>
+      <a href="#opiniones">Opiniones</a>
+      <a href="#preguntas">Preguntas</a>
+    </nav>
+    <div style="display: flex; align-items: center; gap: 12px;">
+      <a href="tel:+541132708968" style="display: flex; align-items: center; gap: 8px; font-weight: 800; font-size: 15px; color: var(--ink);">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span class="nav-links">11 3270-8968</span>
+      </a>
+      <a href="https://wa.me/5491132708968?text=Hola!%20Necesito%20un%20servicio%20de%20auxilio%20o%20remolque." target="_blank" rel="noopener" class="btn btn-primary" style="padding: 12px 20px; font-size: 14px;">
+        Escribir por WhatsApp
+      </a>
+    </div>
+  </div>
+</header>
+
+<section id="top" style="position: relative; background: var(--ink); overflow: hidden; padding: 88px 32px 96px;">
+  <div style="position: absolute; inset: 0; opacity: .5; background-image: repeating-linear-gradient(-32deg, transparent 0 54px, rgba(255,255,255,0.05) 54px 60px); pointer-events: none;"></div>
+  <div style="position: absolute; left: 0; right: 0; bottom: 0; height: 10px; background: repeating-linear-gradient(90deg, #fff 0 44px, transparent 44px 84px); opacity: .85;"></div>
+  <div class="hero-grid" style="position: relative; max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: 1.15fr .85fr; gap: 56px; align-items: center;">
+    <div style="display: flex; flex-direction: column; gap: 28px;">
+      <div class="chip" style="background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.18); color: #fff; align-self: flex-start;">
+        <svg width="14" height="14" viewBox="0 0 24 24" class="star"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg>
+        4.9 en Google · 13 opiniones
+      </div>
+      <h1 style="color: #fff; font-size: 60px; line-height: 1.02;">Auxilio y remolque<br>las 24 horas<br><span style="color: var(--red);">en toda CABA</span></h1>
+      <p style="color: rgba(255,255,255,.78); font-size: 19px; line-height: 1.5; max-width: 520px;">
+        Grúas y asistencia vial con base en Barracas, listas para salir hacia vos en cualquier barrio de la Ciudad Autónoma de Buenos Aires y el Gran Buenos Aires.
+      </p>
+      <div style="display: flex; flex-wrap: wrap; gap: 14px;">
+        <a href="https://wa.me/5491132708968?text=Hola!%20Necesito%20un%20servicio%20de%20auxilio%20o%20remolque." target="_blank" rel="noopener" class="btn btn-primary" style="font-size: 17px; padding: 18px 30px;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          Pedir auxilio por WhatsApp
+        </a>
+        <a href="tel:+541132708968" class="btn btn-outline-light" style="font-size: 17px; padding: 18px 30px;">Llamar al 11 3270-8968</a>
+      </div>
+      <div style="display: flex; gap: 28px; padding-top: 8px; flex-wrap: wrap;">
+        <div>
+          <div style="color: #fff; font-family: 'Anton', sans-serif; font-size: 30px;">24/7</div>
+          <div style="color: rgba(255,255,255,.6); font-size: 13px; font-weight: 600;">los 365 días</div>
+        </div>
+        <div style="width: 1px; background: rgba(255,255,255,.18);"></div>
+        <div>
+          <div style="color: #fff; font-family: 'Anton', sans-serif; font-size: 30px;">4.9★</div>
+          <div style="color: rgba(255,255,255,.6); font-size: 13px; font-weight: 600;">calificación en Google</div>
+        </div>
+        <div style="width: 1px; background: rgba(255,255,255,.18);"></div>
+        <div>
+          <div style="color: #fff; font-family: 'Anton', sans-serif; font-size: 30px;">CABA</div>
+          <div style="color: rgba(255,255,255,.6); font-size: 13px; font-weight: 600;">y Gran Buenos Aires</div>
+        </div>
+      </div>
+    </div>
+    <div style="position: relative; display: flex; align-items: center; justify-content: center;">
+      <div style="position: absolute; width: 420px; height: 420px; border-radius: 50%; background: radial-gradient(circle, rgba(222,27,27,.35), transparent 70%); filter: blur(6px);"></div>
+      <img src="assets/gallery/grua-perfil.webp" alt="Grúa de El 142 Auxilios trasladando un vehículo en Barracas" style="position: relative; max-width: 440px; width: 100%; border-radius: 16px; box-shadow: 0 20px 60px rgba(0,0,0,.5);">
+    </div>
+  </div>
+</section>
+
+<section style="background: var(--paper-alt); border-bottom: 1px solid var(--line);">
+  <div class="section-inner" style="padding: 28px 32px; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 40px;">
+    <div style="display: flex; align-items: center; gap: 10px; font-weight: 700; color: var(--ink-soft);">
+      <svg width="20" height="20" viewBox="0 0 24 24" class="star"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg>
+      4.9 / 5 en 13 opiniones de Google
+    </div>
+    <div style="width: 1px; height: 24px; background: var(--line);"></div>
+    <div style="display: flex; align-items: center; gap: 10px; font-weight: 700; color: var(--ink-soft);">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+      Atención las 24 horas, los 365 días
+    </div>
+    <div style="width: 1px; height: 24px; background: var(--line);"></div>
+    <div style="display: flex; align-items: center; gap: 10px; font-weight: 700; color: var(--ink-soft);">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      Cobertura en toda CABA y el GBA
+    </div>
+  </div>
+</section>
+
+<section id="servicios" class="section">
+  <div class="section-inner">
+    <div style="max-width: 620px; margin-bottom: 56px;">
+      <div class="eyebrow">Servicios</div>
+      <h2 style="font-size: 40px; margin-top: 10px; color: var(--ink);">¿En qué te ayudamos?</h2>
+      <p style="margin-top: 16px; font-size: 17px; color: var(--muted); line-height: 1.5;">Del auxilio en el lugar al remolque completo, resolvemos la emergencia vial con un mismo equipo.</p>
+    </div>
+    <div class="grid-3" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+
+      <div class="card" style="padding: 32px; display: flex; flex-direction: column; gap: 18px;">
+        <div style="width: 56px; height: 56px; border-radius: 12px; background: var(--ink); display: flex; align-items: center; justify-content: center;">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17h1a2 2 0 0 0 2-2v-5l2-5h7l3 5h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-1"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg>
+        </div>
+        <h3 style="font-size: 22px; color: var(--ink);">Acarreo y remolque</h3>
+        <p style="color: var(--muted); font-size: 15.5px; line-height: 1.55;">Levantamos tu auto donde esté y lo llevamos al taller, la cochera o el destino que necesites, con los cuidados de siempre.</p>
+        <a href="https://wa.me/5491132708968?text=Hola!%20Necesito%20un%20servicio%20de%20auxilio%20o%20remolque." target="_blank" rel="noopener" style="margin-top: auto; font-weight: 800; color: var(--red); font-size: 14.5px; display: inline-flex; align-items: center; gap: 6px;">
+          Pedirlo por WhatsApp
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+
+      <div class="card" style="padding: 32px; display: flex; flex-direction: column; gap: 18px;">
+        <div style="width: 56px; height: 56px; border-radius: 12px; background: var(--red); display: flex; align-items: center; justify-content: center;">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+        </div>
+        <h3 style="font-size: 22px; color: var(--ink);">Auxilio mecánico</h3>
+        <p style="color: var(--muted); font-size: 15.5px; line-height: 1.55;">Batería descargada, pinchazo o te quedaste sin combustible: te asistimos en el lugar antes de pensar en remolcar.</p>
+        <a href="https://wa.me/5491132708968?text=Hola!%20Necesito%20un%20servicio%20de%20auxilio%20o%20remolque." target="_blank" rel="noopener" style="margin-top: auto; font-weight: 800; color: var(--red); font-size: 14.5px; display: inline-flex; align-items: center; gap: 6px;">
+          Pedirlo por WhatsApp
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+
+      <div class="card" style="padding: 32px; display: flex; flex-direction: column; gap: 18px;">
+        <div style="width: 56px; height: 56px; border-radius: 12px; background: var(--ink); display: flex; align-items: center; justify-content: center;">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="8" width="15" height="9" rx="1.5"/><path d="M16 11h3.5l3.5 3.5V17h-7z"/><circle cx="6" cy="18.5" r="2"/><circle cx="18" cy="18.5" r="2"/></svg>
+        </div>
+        <h3 style="font-size: 22px; color: var(--ink);">Traslado de vehículos livianos</h3>
+        <p style="color: var(--muted); font-size: 15.5px; line-height: 1.55;">Trasladamos tu vehículo liviano de punta a punta, con el mismo equipo y los mismos cuidados que un auxilio.</p>
+        <a href="https://wa.me/5491132708968?text=Hola!%20Necesito%20un%20servicio%20de%20auxilio%20o%20remolque." target="_blank" rel="noopener" style="margin-top: auto; font-weight: 800; color: var(--red); font-size: 14.5px; display: inline-flex; align-items: center; gap: 6px;">
+          Pedirlo por WhatsApp
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section style="background: var(--ink);" class="section">
+  <div class="section-inner">
+    <div style="max-width: 560px; margin-bottom: 56px;">
+      <div class="eyebrow">Cómo funciona</div>
+      <h2 style="font-size: 40px; margin-top: 10px; color: #fff;">Así de simple</h2>
+    </div>
+    <div class="grid-4" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px;">
+      <div style="display: flex; flex-direction: column; gap: 14px;">
+        <div style="width: 44px; height: 44px; border-radius: 10px; background: var(--red); color: #fff; font-family: 'Anton', sans-serif; font-size: 20px; display: flex; align-items: center; justify-content: center;">1</div>
+        <h3 style="font-size: 18px; color: #fff;">Escribinos</h3>
+        <p style="color: rgba(255,255,255,.65); font-size: 14.5px; line-height: 1.5;">Por WhatsApp o llamada, a cualquier hora del día.</p>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 14px;">
+        <div style="width: 44px; height: 44px; border-radius: 10px; background: var(--red); color: #fff; font-family: 'Anton', sans-serif; font-size: 20px; display: flex; align-items: center; justify-content: center;">2</div>
+        <h3 style="font-size: 18px; color: #fff;">Contános qué pasó</h3>
+        <p style="color: rgba(255,255,255,.65); font-size: 14.5px; line-height: 1.5;">Ubicación, tipo de vehículo y qué necesitás.</p>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 14px;">
+        <div style="width: 44px; height: 44px; border-radius: 10px; background: var(--red); color: #fff; font-family: 'Anton', sans-serif; font-size: 20px; display: flex; align-items: center; justify-content: center;">3</div>
+        <h3 style="font-size: 18px; color: #fff;">Sale un móvil</h3>
+        <p style="color: rgba(255,255,255,.65); font-size: 14.5px; line-height: 1.5;">Coordinamos el auxilio o la grúa más cercana a vos.</p>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 14px;">
+        <div style="width: 44px; height: 44px; border-radius: 10px; background: var(--red); color: #fff; font-family: 'Anton', sans-serif; font-size: 20px; display: flex; align-items: center; justify-content: center;">4</div>
+        <h3 style="font-size: 18px; color: #fff;">Te asistimos</h3>
+        <p style="color: rgba(255,255,255,.65); font-size: 14.5px; line-height: 1.5;">Resolvemos en el lugar o remolcamos con seguridad.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="galeria" class="section">
+  <div class="section-inner">
+    <div style="max-width: 620px; margin-bottom: 40px;">
+      <div class="eyebrow">Galería</div>
+      <h2 style="font-size: 40px; margin-top: 10px; color: var(--ink);">Nuestros móviles, en la calle</h2>
+      <p style="margin-top: 16px; font-size: 17px; color: var(--muted); line-height: 1.5;">Fotos reales de nuestros servicios en distintos puntos de CABA.</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item" data-full="assets/gallery/grua-frente.webp">
+        <img src="assets/gallery/grua-frente.webp" alt="Grúa de El 142 Auxilios lista para salir" loading="lazy">
+        <div class="gallery-label">Nuestra grúa</div>
+      </div>
+      <div class="gallery-item" data-full="assets/gallery/auxilio-bateria.webp">
+        <img src="assets/gallery/auxilio-bateria.webp" alt="Asistencia con batería en el lugar" loading="lazy">
+        <div class="gallery-label">Auxilio mecánico</div>
+      </div>
+      <div class="gallery-item" data-full="assets/gallery/acarreo-liviano.webp">
+        <img src="assets/gallery/acarreo-liviano.webp" alt="Vehículo liviano cargado para su traslado" loading="lazy">
+        <div class="gallery-label">Acarreo de livianos</div>
+      </div>
+      <div class="gallery-item" data-full="assets/gallery/traslado-sedan.webp">
+        <img src="assets/gallery/traslado-sedan.webp" alt="Sedán asegurado sobre la plataforma" loading="lazy">
+        <div class="gallery-label">Traslado seguro</div>
+      </div>
+      <div class="gallery-item" data-full="assets/gallery/grua-perfil.webp">
+        <img src="assets/gallery/grua-perfil.webp" alt="Grúa de perfil trasladando un vehículo en Barracas" loading="lazy">
+        <div class="gallery-label">En Barracas</div>
+      </div>
+      <div class="gallery-item" data-full="assets/gallery/traslado-comercial.webp">
+        <img src="assets/gallery/traslado-comercial.webp" alt="Vehículo comercial cargado sobre la grúa" loading="lazy">
+        <div class="gallery-label">Vehículos comerciales</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cobertura" class="section">
+  <div class="section-inner cov-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center;">
+    <div style="display: flex; flex-direction: column; gap: 20px;">
+      <div class="eyebrow">Cobertura</div>
+      <h2 style="font-size: 38px; color: var(--ink); line-height: 1.05;">Toda la Ciudad Autónoma de Buenos Aires y el Gran Buenos Aires</h2>
+      <p style="font-size: 17px; color: var(--muted); line-height: 1.55;">Con base en Barracas, salimos hacia cualquier barrio de CABA y las zonas del conurbano bonaerense. Contanos dónde estás y coordinamos el auxilio o la grúa más cercana.</p>
+      <div style="display: flex; flex-direction: column; gap: 14px; padding-top: 8px;">
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span style="font-weight: 700;">Base: Azara 100, C1267 — Barracas, CABA</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          <span style="font-weight: 700;">Atención las 24 horas, los 365 días</span>
+        </div>
+      </div>
+      <div style="display: flex; gap: 14px; flex-wrap: wrap; padding-top: 8px;">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Azara+100%2C+C1267+CABA" target="_blank" rel="noopener" class="btn btn-outline-dark">Cómo llegar</a>
+        <a href="https://wa.me/5491132708968?text=Hola!%20Necesito%20un%20servicio%20de%20auxilio%20o%20remolque." target="_blank" rel="noopener" class="btn btn-primary">Consultar mi zona</a>
+      </div>
+    </div>
+    <div style="position: relative; display: flex; align-items: center; justify-content: center; background: var(--paper-alt); border: 1px solid var(--line); border-radius: 20px; padding: 40px; min-height: 360px;">
+      <svg width="100%" height="100%" viewBox="0 0 320 320" style="max-width: 320px;">
+        <circle cx="160" cy="160" r="140" fill="none" stroke="var(--line)" stroke-width="1.5" stroke-dasharray="4 6"/>
+        <circle cx="160" cy="160" r="95" fill="none" stroke="var(--line)" stroke-width="1.5" stroke-dasharray="4 6"/>
+        <circle cx="160" cy="160" r="50" fill="rgba(222,27,27,.08)" stroke="var(--red)" stroke-width="1.5" stroke-dasharray="4 6"/>
+        <circle cx="160" cy="160" r="7" fill="var(--red)"/>
+        <circle cx="160" cy="160" r="14" fill="none" stroke="var(--red)" stroke-width="2"/>
+        <text x="160" y="186" text-anchor="middle" font-family="Manrope" font-weight="800" font-size="12" fill="var(--ink)">Barracas</text>
+        <circle cx="95" cy="95" r="4" fill="var(--ink)"/>
+        <text x="95" y="82" text-anchor="middle" font-family="Manrope" font-weight="700" font-size="11" fill="var(--ink-soft)">San Telmo</text>
+        <circle cx="230" cy="90" r="4" fill="var(--ink)"/>
+        <text x="230" y="77" text-anchor="middle" font-family="Manrope" font-weight="700" font-size="11" fill="var(--ink-soft)">Palermo</text>
+        <circle cx="245" cy="200" r="4" fill="var(--ink)"/>
+        <text x="245" y="217" text-anchor="middle" font-family="Manrope" font-weight="700" font-size="11" fill="var(--ink-soft)">Avellaneda</text>
+        <circle cx="80" cy="225" r="4" fill="var(--ink)"/>
+        <text x="80" y="242" text-anchor="middle" font-family="Manrope" font-weight="700" font-size="11" fill="var(--ink-soft)">Caballito</text>
+        <circle cx="160" cy="40" r="4" fill="var(--ink)"/>
+        <text x="160" y="27" text-anchor="middle" font-family="Manrope" font-weight="700" font-size="11" fill="var(--ink-soft)">San Isidro</text>
+      </svg>
+      <div style="position: absolute; bottom: 14px; left: 0; right: 0; text-align: center; font-size: 12px; color: var(--muted); font-weight: 600;">Mapa ilustrativo — consultanos tu zona exacta</div>
+    </div>
+  </div>
+</section>
+
+<section id="opiniones" class="section" style="background: var(--paper-alt);">
+  <div class="section-inner">
+    <div style="max-width: 620px; margin-bottom: 48px;">
+      <div class="eyebrow">Opiniones</div>
+      <h2 style="font-size: 40px; margin-top: 10px; color: var(--ink);">Lo que dice quien ya nos llamó</h2>
+      <p style="margin-top: 16px; font-size: 16px; color: var(--muted); line-height: 1.5;">Opiniones reales de nuestra ficha de Google, cada una respondida personalmente por El 142 Auxilios.</p>
+    </div>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: stretch; margin-bottom: 32px;">
+      <div style="background: var(--ink); border-radius: 16px; padding: 32px; color: #fff; display: flex; flex-direction: column; gap: 14px; min-width: 220px; flex: 0 0 auto;">
+        <div style="font-family: 'Anton', sans-serif; font-size: 56px; line-height: 1;">4.9</div>
+        <div style="position: relative; width: 140px; height: 24px;">
+          <div style="position: absolute; inset: 0; display: flex; gap: 4px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="rgba(255,255,255,.25)"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="rgba(255,255,255,.25)"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="rgba(255,255,255,.25)"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="rgba(255,255,255,.25)"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="rgba(255,255,255,.25)"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg>
+          </div>
+          <div style="position: absolute; inset: 0; width: 98%; overflow: hidden; display: flex; gap: 4px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" class="star"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" class="star"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" class="star"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" class="star"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" class="star"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg>
+          </div>
+        </div>
+        <p style="font-size: 14px; color: rgba(255,255,255,.7); font-weight: 600;">13 opiniones en Google Maps</p>
+        <div style="display: flex; flex-direction: column; gap: 6px; padding-top: 6px;">
+          <div style="display: flex; align-items: center; gap: 8px; font-size: 12px; color: rgba(255,255,255,.6);">
+            <span style="width: 14px;">5★</span>
+            <div style="flex: 1; height: 6px; background: rgba(255,255,255,.15); border-radius: 4px; overflow: hidden;"><div style="width: 92%; height: 100%; background: var(--red);"></div></div>
+            <span>12</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 8px; font-size: 12px; color: rgba(255,255,255,.6);">
+            <span style="width: 14px;">4★</span>
+            <div style="flex: 1; height: 6px; background: rgba(255,255,255,.15); border-radius: 4px; overflow: hidden;"><div style="width: 8%; height: 100%; background: var(--red);"></div></div>
+            <span>1</span>
+          </div>
+        </div>
+        <a href="https://share.google/2hVYbhttNT3qB0B8M" target="_blank" rel="noopener" style="margin-top: 8px; font-size: 13px; font-weight: 800; color: #fff; display: inline-flex; align-items: center; gap: 6px;">
+          Ver todas las opiniones
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+
+      <div class="grid-3 reviews-grid" id="reviews-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; flex: 1 1 560px;">
+
+        <div class="card" style="padding: 26px; display: flex; flex-direction: column; gap: 14px;">
+          <div style="display: flex; gap: 3px;"><svg width="16" height="16" viewBox="0 0 24 24" class="star"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" class="star"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" class="star"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" class="star"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" class="star"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg></div>
+          <p style="font-size: 15px; line-height: 1.55; color: var(--ink-soft); flex: 1;">"Muy atentos. Atienden rápido y Daniel muy copado y atento."</p>
+          <div><div style="font-weight: 800; font-size: 14px;">Federico Vitale</div><div style="font-size: 12.5px; color: var(--muted);">1 opinión · hace 6 meses</div></div>
+        </div>
+
+        <div class="card" style="padding: 26px; display: flex; flex-direction: column; gap: 14px;">
+          <div style="display: flex; gap: 3px;"><svg width="16" height="16" viewBox="0 0 24 24" class="star"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" class="star"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" class="star"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" class="star"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" class="star"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg></div>
+          <p style="font-size: 15px; line-height: 1.55; color: var(--ink-soft); flex: 1;">"Excelente servicio, tanto la atención telefónica como el chofer de la grúa Daniel. No es poco que te atiendan de manera amable en un momento así, totalmente recomendables."</p>
+          <div><div style="font-weight: 800; font-size: 14px;">Alexis Damian Gimenez</div><div style="font-size: 12.5px; color: var(--muted);">2 opiniones · hace 1 año</div></div>
+        </div>
+
+        <div class="card" style="padding: 26px; display: flex; flex-direction: column; gap: 14px;">
+          <div style="display: flex; gap: 3px;"><svg width="16" height="16" viewBox="0 0 24 24" class="star"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" class="star"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" class="star"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" class="star"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" class="star"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg></div>
+          <p style="font-size: 15px; line-height: 1.55; color: var(--ink-soft); flex: 1;">"Un crack Daniel. Vino por un auxilio que no se pudo resolver, me recomendó un taller de confianza y se ocupó de todo. Tuvieron mucha flexibilidad para el pago porque en el momento no tenía para pagar."</p>
+          <div><div style="font-weight: 800; font-size: 14px;">Rodrigo Salsamendi</div><div style="font-size: 12.5px; color: var(--muted);">Local Guide · 147 opiniones · hace 1 año</div></div>
+        </div>
+
+        <div class="card" style="padding: 26px; display: flex; flex-direction: column; gap: 14px;">
+          <div style="display: flex; gap: 3px;"><svg width="16" height="16" viewBox="0 0 24 24" class="star"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" class="star"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" class="star"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" class="star"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" class="star"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg></div>
+          <p style="font-size: 15px; line-height: 1.55; color: var(--ink-soft); flex: 1;">"Excelente atención de Daniel. Muy profesional y cuidadoso en el traslado. Impecable el estado del camión. Híper recomendable."</p>
+          <div><div style="font-weight: 800; font-size: 14px;">B. Costanza Bilancieri</div><div style="font-size: 12.5px; color: var(--muted);">119 opiniones · hace 1 año</div></div>
+        </div>
+
+        <div class="card" style="padding: 26px; display: flex; flex-direction: column; gap: 14px;">
+          <div style="display: flex; gap: 3px;"><svg width="16" height="16" viewBox="0 0 24 24" class="star"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" class="star"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" class="star"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" class="star"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" class="star"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg></div>
+          <p style="font-size: 15px; line-height: 1.55; color: var(--ink-soft); flex: 1;">"Karina es una persona muy atenta y considerada al problema del cliente, muy prolija. Y Daniel un caballero, muy expeditivo y amable. Recomiendo 100%."</p>
+          <div><div style="font-weight: 800; font-size: 14px;">Mauro Sarubbi</div><div style="font-size: 12.5px; color: var(--muted);">5 opiniones · hace 1 año</div></div>
+        </div>
+
+        <div class="card" style="padding: 26px; display: flex; flex-direction: column; gap: 14px;">
+          <div style="display: flex; gap: 3px;"><svg width="16" height="16" viewBox="0 0 24 24" class="star"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" class="star"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" class="star"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" class="star"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" class="star"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg></div>
+          <p style="font-size: 15px; line-height: 1.55; color: var(--ink-soft); flex: 1;">"Muy buen servicio, Daniel un genio que hacía todo más rápido y sencillo, una excelente persona además."</p>
+          <div><div style="font-weight: 800; font-size: 14px;">Max Gamboa</div><div style="font-size: 12.5px; color: var(--muted);">Local Guide · 5 opiniones · hace 1 año</div></div>
+        </div>
+
+        <div class="card review-extra" style="padding: 26px; display: flex; flex-direction: column; gap: 14px;">
+          <div style="display: flex; gap: 3px;"><svg width="16" height="16" viewBox="0 0 24 24" class="star"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" class="star"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" class="star"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" class="star"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" class="star"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg></div>
+          <p style="font-size: 15px; line-height: 1.55; color: var(--ink-soft); flex: 1;">"Excelente servicio, son cumplidores y muy amables, super recomendable."</p>
+          <div><div style="font-weight: 800; font-size: 14px;">Mariana Nantón</div><div style="font-size: 12.5px; color: var(--muted);">2 opiniones · hace 1 año</div></div>
+        </div>
+
+        <div class="card review-extra" style="padding: 26px; display: flex; flex-direction: column; gap: 14px;">
+          <div style="display: flex; gap: 3px;"><svg width="16" height="16" viewBox="0 0 24 24" class="star"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" class="star"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" class="star"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" class="star"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" class="star"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg></div>
+          <p style="font-size: 15px; line-height: 1.55; color: var(--ink-soft); flex: 1;">"Daniel es muy puntual y dispuesto a ayudar en todo momento. Realmente me solucionó un problema."</p>
+          <div><div style="font-weight: 800; font-size: 14px;">Alejandro Gonzalez Vidal</div><div style="font-size: 12.5px; color: var(--muted);">8 opiniones · hace 1 año</div></div>
+        </div>
+
+        <div class="card review-extra" style="padding: 26px; display: flex; flex-direction: column; gap: 14px;">
+          <div style="display: flex; gap: 3px;"><svg width="16" height="16" viewBox="0 0 24 24" class="star"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" class="star"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" class="star"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" class="star"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" class="star"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg></div>
+          <p style="font-size: 15px; line-height: 1.55; color: var(--ink-soft); flex: 1;">"Excelente servicio y amabilidad."</p>
+          <div><div style="font-weight: 800; font-size: 14px;">Vanesa Romina Tomasi</div><div style="font-size: 12.5px; color: var(--muted);">2 opiniones · hace 1 año</div></div>
+        </div>
+
+        <div class="card review-extra" style="padding: 26px; display: flex; flex-direction: column; gap: 14px;">
+          <div style="display: flex; gap: 3px;"><svg width="16" height="16" viewBox="0 0 24 24" class="star"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" class="star"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" class="star"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" class="star"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" class="star"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg></div>
+          <p style="font-size: 15px; line-height: 1.55; color: var(--ink-soft); flex: 1;">"Excelente atención."</p>
+          <div><div style="font-weight: 800; font-size: 14px;">Blanca Pintos</div><div style="font-size: 12.5px; color: var(--muted);">Local Guide · 14 opiniones · hace 1 año</div></div>
+        </div>
+
+        <div class="card review-extra" style="padding: 26px; display: flex; flex-direction: column; gap: 14px;">
+          <div style="display: flex; gap: 3px;"><svg width="16" height="16" viewBox="0 0 24 24" class="star"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" class="star"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" class="star"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" class="star"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" class="star"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg></div>
+          <p style="font-size: 15px; line-height: 1.55; color: var(--ink-soft); flex: 1;">"Un lujo la atención."</p>
+          <div><div style="font-weight: 800; font-size: 14px;">German Lozano</div><div style="font-size: 12.5px; color: var(--muted);">1 opinión · hace 1 semana</div></div>
+        </div>
+
+        <div class="card review-extra" style="padding: 26px; display: flex; flex-direction: column; gap: 14px;">
+          <div style="display: flex; gap: 3px;"><svg width="16" height="16" viewBox="0 0 24 24" class="star"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" class="star"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" class="star"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" class="star"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg><svg width="16" height="16" viewBox="0 0 24 24" class="star"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg></div>
+          <p style="font-size: 15px; line-height: 1.55; color: var(--ink-soft); flex: 1;">"Vinieron súper rápido a llevarse el auto. Muy resolutivos y amables. Los llamaría con gusto nuevamente."</p>
+          <div><div style="font-weight: 800; font-size: 14px;">Malena Burs</div><div style="font-size: 12.5px; color: var(--muted);">7 opiniones · hace 1 mes</div></div>
+        </div>
+
+      </div>
+    </div>
+    <div style="display: flex; justify-content: center;">
+      <button id="reviews-toggle" class="btn btn-outline-dark" style="background: #fff;">Mostrar las 12 opiniones</button>
+    </div>
+  </div>
+</section>
+
+<section id="preguntas" class="section">
+  <div class="section-inner" style="max-width: 800px;">
+    <div style="margin-bottom: 40px;">
+      <div class="eyebrow">Preguntas frecuentes</div>
+      <h2 style="font-size: 40px; margin-top: 10px; color: var(--ink);">Antes de escribirnos</h2>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 12px;">
+
+      <div class="card faq-item is-open">
+        <button class="faq-toggle" style="width: 100%; text-align: left; background: none; border: none; padding: 20px 22px; display: flex; align-items: center; justify-content: space-between; gap: 16px; cursor: pointer;">
+          <span style="font-weight: 800; font-size: 16px; color: var(--ink);">¿Trabajan las 24 horas?</span>
+          <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto;"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-answer">Sí, brindamos atención los 365 días del año, a cualquier hora del día o de la noche.</div>
+      </div>
+
+      <div class="card faq-item">
+        <button class="faq-toggle" style="width: 100%; text-align: left; background: none; border: none; padding: 20px 22px; display: flex; align-items: center; justify-content: space-between; gap: 16px; cursor: pointer;">
+          <span style="font-weight: 800; font-size: 16px; color: var(--ink);">¿En qué zonas dan servicio?</span>
+          <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto;"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-answer">En toda la Ciudad Autónoma de Buenos Aires y las zonas del Gran Buenos Aires. Contanos tu ubicación y te confirmamos el tiempo estimado de llegada.</div>
+      </div>
+
+      <div class="card faq-item">
+        <button class="faq-toggle" style="width: 100%; text-align: left; background: none; border: none; padding: 20px 22px; display: flex; align-items: center; justify-content: space-between; gap: 16px; cursor: pointer;">
+          <span style="font-weight: 800; font-size: 16px; color: var(--ink);">¿Cómo pido el auxilio?</span>
+          <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto;"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-answer">Por WhatsApp o llamando al 11 3270-8968. Contanos qué pasó, dónde estás y el tipo de vehículo.</div>
+      </div>
+
+      <div class="card faq-item">
+        <button class="faq-toggle" style="width: 100%; text-align: left; background: none; border: none; padding: 20px 22px; display: flex; align-items: center; justify-content: space-between; gap: 16px; cursor: pointer;">
+          <span style="font-weight: 800; font-size: 16px; color: var(--ink);">¿Qué hacen si el auto no arranca?</span>
+          <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto;"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-answer">Primero evaluamos si podemos resolverlo en el lugar, por ejemplo batería, combustible o un pinchazo. Si no se puede, coordinamos el remolque.</div>
+      </div>
+
+      <div class="card faq-item">
+        <button class="faq-toggle" style="width: 100%; text-align: left; background: none; border: none; padding: 20px 22px; display: flex; align-items: center; justify-content: space-between; gap: 16px; cursor: pointer;">
+          <span style="font-weight: 800; font-size: 16px; color: var(--ink);">¿Puedo pedir un traslado sin que haya una falla?</span>
+          <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto;"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-answer">Sí, también trasladamos vehículos livianos de un punto a otro aunque no haya un problema mecánico de por medio.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section style="background: var(--red); position: relative; overflow: hidden;" class="section">
+  <div style="position: absolute; inset: 0; opacity: .5; background-image: repeating-linear-gradient(-32deg, transparent 0 54px, rgba(255,255,255,0.08) 54px 60px);"></div>
+  <div class="section-inner" style="position: relative; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 22px;">
+    <h2 style="font-size: 42px; color: #fff; max-width: 640px;">¿Te quedaste varado ahora mismo?</h2>
+    <p style="color: rgba(255,255,255,.9); font-size: 18px; max-width: 520px;">Escribinos y coordinamos el auxilio o la grúa en minutos, en cualquier punto de CABA y el GBA.</p>
+    <div style="display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; padding-top: 8px;">
+      <a href="https://wa.me/5491132708968?text=Hola!%20Necesito%20un%20servicio%20de%20auxilio%20o%20remolque." target="_blank" rel="noopener" class="btn" style="background: #fff; color: var(--red); font-size: 17px; padding: 18px 30px;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        Escribir por WhatsApp
+      </a>
+      <a href="tel:+541132708968" class="btn btn-outline-light" style="font-size: 17px; padding: 18px 30px;">Llamar al 11 3270-8968</a>
+    </div>
+  </div>
+</section>
+
+<footer style="background: var(--ink); padding: 56px 32px 32px;">
+  <div class="section-inner" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px; padding-bottom: 32px; border-bottom: 1px solid rgba(255,255,255,.12);">
+    <div style="display: flex; flex-direction: column; gap: 16px; max-width: 320px;">
+      <img src="assets/logo.png" alt="El 142 Auxilios" style="height: 48px; width: auto; filter: brightness(0) invert(1);">
+      <p style="color: rgba(255,255,255,.6); font-size: 14px; line-height: 1.5;">Servicio de auxilio vial y remolque con base en Barracas, para toda la Ciudad Autónoma de Buenos Aires y el Gran Buenos Aires.</p>
+      <a href="https://instagram.com/el142auxilios" target="_blank" rel="noopener" style="color: rgba(255,255,255,.6); font-size: 14px; font-weight: 700;">@el142auxilios</a>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 12px;">
+      <div style="color: #fff; font-weight: 800; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 4px;">Contacto</div>
+      <a href="tel:+541132708968" style="color: rgba(255,255,255,.7); font-size: 14.5px;">11 3270-8968</a>
+      <a href="https://wa.me/5491132708968?text=Hola!%20Necesito%20un%20servicio%20de%20auxilio%20o%20remolque." target="_blank" rel="noopener" style="color: rgba(255,255,255,.7); font-size: 14.5px;">WhatsApp: 11 3270-8968</a>
+      <span style="color: rgba(255,255,255,.7); font-size: 14.5px;">Azara 100, C1267 — Barracas, CABA</span>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 12px;">
+      <div style="color: #fff; font-weight: 800; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 4px;">Servicio</div>
+      <a href="#servicios" style="color: rgba(255,255,255,.7); font-size: 14.5px;">Acarreo y remolque</a>
+      <a href="#servicios" style="color: rgba(255,255,255,.7); font-size: 14.5px;">Auxilio mecánico</a>
+      <a href="#servicios" style="color: rgba(255,255,255,.7); font-size: 14.5px;">Traslado de livianos</a>
+      <span style="color: rgba(255,255,255,.7); font-size: 14.5px;">Atención las 24 horas</span>
+    </div>
+  </div>
+  <div class="section-inner" style="padding-top: 24px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px;">
+    <span style="color: rgba(255,255,255,.45); font-size: 13px;">© 2026 El 142 Auxilios</span>
+    <span style="color: rgba(255,255,255,.45); font-size: 13px;">Ciudad Autónoma de Buenos Aires y alrededores</span>
+  </div>
+</footer>
+
+<a href="https://wa.me/5491132708968?text=Hola!%20Necesito%20un%20servicio%20de%20auxilio%20o%20remolque." target="_blank" rel="noopener" aria-label="Escribir por WhatsApp" style="position: fixed; right: 24px; bottom: 24px; z-index: 60; width: 60px; height: 60px; border-radius: 50%; background: var(--red); display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 24px rgba(0,0,0,.28);">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+</a>
+
+<div id="lightbox">
+  <button id="lightbox-close" aria-label="Cerrar">&times;</button>
+  <img id="lightbox-img" src="" alt="">
+</div>
+
+</div>
+
+<script>
+document.querySelectorAll('.faq-item').forEach(function (item) {
+  item.querySelector('.faq-toggle').addEventListener('click', function () {
+    var wasOpen = item.classList.contains('is-open');
+    document.querySelectorAll('.faq-item').forEach(function (i) { i.classList.remove('is-open'); });
+    if (!wasOpen) item.classList.add('is-open');
+  });
+});
+
+var reviewsGrid = document.getElementById('reviews-grid');
+var reviewsToggle = document.getElementById('reviews-toggle');
+reviewsToggle.addEventListener('click', function () {
+  var expanded = reviewsGrid.classList.toggle('show-all');
+  reviewsToggle.textContent = expanded ? 'Mostrar menos' : 'Mostrar las 12 opiniones';
+});
+
+var lightbox = document.getElementById('lightbox');
+var lightboxImg = document.getElementById('lightbox-img');
+document.querySelectorAll('.gallery-item').forEach(function (item) {
+  item.addEventListener('click', function () {
+    lightboxImg.src = item.getAttribute('data-full');
+    lightboxImg.alt = item.querySelector('img').alt;
+    lightbox.classList.add('is-open');
+  });
+});
+document.getElementById('lightbox-close').addEventListener('click', function () {
+  lightbox.classList.remove('is-open');
+});
+lightbox.addEventListener('click', function (e) {
+  if (e.target === lightbox) lightbox.classList.remove('is-open');
+});
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') lightbox.classList.remove('is-open');
+});
+</script>
+</body>
+</html>
