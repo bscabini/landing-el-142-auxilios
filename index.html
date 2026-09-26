@@ -46,14 +46,51 @@ button{font-family:inherit}
 .card{background:#fff;border:1px solid var(--line);border-radius:16px}
 
 /* FAQ */
-.faq-answer{display:none;padding:0 22px 22px;font-size:15px;color:var(--muted);line-height:1.55}
-.faq-item.is-open .faq-answer{display:block}
+.faq-answer{overflow:hidden;max-height:0;opacity:0;padding:0 22px;font-size:15px;color:var(--muted);line-height:1.55;transition:max-height .4s cubic-bezier(.16,1,.3,1),opacity .3s ease,padding-bottom .4s ease}
+.faq-item.is-open .faq-answer{max-height:240px;opacity:1;padding-bottom:22px}
 .faq-item.is-open .faq-chevron{transform:rotate(180deg)}
-.faq-chevron{transition:transform .2s ease}
+.faq-chevron{transition:transform .3s ease}
 
 /* Reviews */
-.review-extra{display:none}
-.reviews-grid.show-all .review-extra{display:flex}
+.review-extra{max-height:0;opacity:0;margin-top:-20px;overflow:hidden;padding-top:0;padding-bottom:0;border-width:0;transition:max-height .4s ease,opacity .25s ease,margin-top .4s ease,padding .3s ease,border-width .3s ease,transform .25s ease,box-shadow .25s ease}
+.reviews-grid.show-all .review-extra{max-height:600px;opacity:1;margin-top:0;padding-top:26px;padding-bottom:26px;border-width:1px;transition:max-height .5s cubic-bezier(.16,1,.3,1),opacity .45s ease .08s,margin-top .5s ease,padding .4s ease,border-width .4s ease,transform .25s ease,box-shadow .25s ease}
+
+/* Motion */
+html{scroll-behavior:smooth}
+.btn{transition:background-color .2s ease,color .2s ease,transform .15s ease}
+.btn:active{transform:scale(.96)}
+.card{transition:transform .25s ease,box-shadow .25s ease}
+.card:hover{transform:translateY(-4px);box-shadow:0 16px 32px rgba(20,19,18,.08)}
+
+@keyframes heroIn{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+.hero-in{animation:heroIn .8s cubic-bezier(.16,1,.3,1) both}
+.hero-in-delayed{animation:heroIn .9s cubic-bezier(.16,1,.3,1) .15s both}
+
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.reveal.is-visible{opacity:1;transform:translateY(0)}
+.reveal-stagger > *{opacity:0;transform:translateY(28px);transition:opacity .6s cubic-bezier(.16,1,.3,1),transform .6s cubic-bezier(.16,1,.3,1)}
+.reveal-stagger.is-visible > *{opacity:1;transform:translateY(0)}
+.reveal-stagger.is-visible > *:nth-child(1){transition-delay:.02s}
+.reveal-stagger.is-visible > *:nth-child(2){transition-delay:.09s}
+.reveal-stagger.is-visible > *:nth-child(3){transition-delay:.16s}
+.reveal-stagger.is-visible > *:nth-child(4){transition-delay:.23s}
+.reveal-stagger.is-visible > *:nth-child(5){transition-delay:.30s}
+.reveal-stagger.is-visible > *:nth-child(6){transition-delay:.37s}
+
+@keyframes waPulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.5)}70%{box-shadow:0 0 0 16px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+.wa-float{border-radius:50%;animation:waPulse 2.6s ease-out infinite;transition:transform .2s ease}
+.wa-float:hover{transform:scale(1.08)}
+
+.site-header{transition:box-shadow .3s ease}
+.site-header.is-scrolled{box-shadow:0 6px 20px rgba(20,19,18,.08)}
+
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  .reveal,.reveal-stagger > *,.faq-answer,.wa-float,.hero-in,.hero-in-delayed,.review-extra{transition:none !important;animation:none !important;opacity:1 !important;transform:none !important}
+  .faq-item.is-open .faq-answer{max-height:none !important}
+  .reviews-grid.show-all .review-extra{max-height:none !important}
+  .card:hover{transform:none !important}
+}
 
 /* Gallery */
 .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
@@ -82,7 +119,7 @@ button{font-family:inherit}
 
 <div style="width: 100%; min-height: 100vh; display: flex; flex-direction: column; background: var(--paper); overflow-x: hidden; position: relative;">
 
-<header style="position: sticky; top: 0; z-index: 50; background: rgba(251,248,244,0.93); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line);">
+<header id="site-header" class="site-header" style="position: sticky; top: 0; z-index: 50; background: rgba(251,248,244,0.93); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line);">
   <div style="max-width: 1180px; margin: 0 auto; padding: 14px 32px; display: flex; align-items: center; justify-content: space-between; gap: 24px;">
     <a href="#top" aria-label="El 142 Auxilios — inicio" style="display: flex; align-items: center; gap: 10px;">
       <img src="assets/logo-transparent.png" alt="El 142 Auxilios" style="height: 60px; width: auto; display: block;">
@@ -110,7 +147,7 @@ button{font-family:inherit}
   <div style="position: absolute; inset: 0; opacity: .5; background-image: repeating-linear-gradient(-32deg, transparent 0 54px, rgba(255,255,255,0.05) 54px 60px); pointer-events: none;"></div>
   <div style="position: absolute; left: 0; right: 0; bottom: 0; height: 10px; background: repeating-linear-gradient(90deg, #fff 0 44px, transparent 44px 84px); opacity: .85;"></div>
   <div class="hero-grid" style="position: relative; max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: 1.15fr .85fr; gap: 56px; align-items: center;">
-    <div style="display: flex; flex-direction: column; gap: 28px;">
+    <div class="hero-in" style="display: flex; flex-direction: column; gap: 28px;">
       <div class="chip" style="background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.18); color: #fff; align-self: flex-start;">
         <svg width="14" height="14" viewBox="0 0 24 24" class="star"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg>
         4.9 en Google · 13 opiniones
@@ -143,7 +180,7 @@ button{font-family:inherit}
         </div>
       </div>
     </div>
-    <div style="position: relative; display: flex; align-items: center; justify-content: center;">
+    <div class="hero-in-delayed" style="position: relative; display: flex; align-items: center; justify-content: center;">
       <div style="position: absolute; width: 420px; height: 420px; border-radius: 50%; background: radial-gradient(circle, rgba(222,27,27,.35), transparent 70%); filter: blur(6px);"></div>
       <img src="assets/gallery/grua-perfil.webp" alt="Grúa de El 142 Auxilios trasladando un vehículo en Barracas" style="position: relative; max-width: 440px; width: 100%; border-radius: 16px; box-shadow: 0 20px 60px rgba(0,0,0,.5);">
     </div>
@@ -176,7 +213,7 @@ button{font-family:inherit}
       <h2 style="font-size: 40px; margin-top: 10px; color: var(--ink);">¿En qué te ayudamos?</h2>
       <p style="margin-top: 16px; font-size: 17px; color: var(--muted); line-height: 1.5;">Del auxilio en el lugar al remolque completo, resolvemos la emergencia vial con un mismo equipo.</p>
     </div>
-    <div class="grid-3" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+    <div class="grid-3 reveal-stagger" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
 
       <div class="card" style="padding: 32px; display: flex; flex-direction: column; gap: 18px;">
         <div style="width: 56px; height: 56px; border-radius: 12px; background: var(--ink); display: flex; align-items: center; justify-content: center;">
@@ -224,7 +261,7 @@ button{font-family:inherit}
       <div class="eyebrow">Cómo funciona</div>
       <h2 style="font-size: 40px; margin-top: 10px; color: #fff;">Así de simple</h2>
     </div>
-    <div class="grid-4" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px;">
+    <div class="grid-4 reveal-stagger" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px;">
       <div style="display: flex; flex-direction: column; gap: 14px;">
         <div style="width: 44px; height: 44px; border-radius: 10px; background: var(--red); color: #fff; font-family: 'Anton', sans-serif; font-size: 20px; display: flex; align-items: center; justify-content: center;">1</div>
         <h3 style="font-size: 18px; color: #fff;">Escribinos</h3>
@@ -256,7 +293,7 @@ button{font-family:inherit}
       <h2 style="font-size: 40px; margin-top: 10px; color: var(--ink);">Nuestros móviles, en la calle</h2>
       <p style="margin-top: 16px; font-size: 17px; color: var(--muted); line-height: 1.5;">Fotos reales de nuestros servicios en distintos puntos de CABA.</p>
     </div>
-    <div class="gallery-grid">
+    <div class="gallery-grid reveal-stagger">
       <div class="gallery-item" data-full="assets/gallery/grua-frente.webp">
         <img src="assets/gallery/grua-frente.webp" alt="Grúa de El 142 Auxilios lista para salir" loading="lazy">
         <div class="gallery-label">Nuestra grúa</div>
@@ -281,13 +318,17 @@ button{font-family:inherit}
         <img src="assets/gallery/traslado-comercial.webp" alt="Vehículo comercial cargado sobre la grúa" loading="lazy">
         <div class="gallery-label">Vehículos comerciales</div>
       </div>
+      <div class="gallery-item" data-full="assets/gallery/traslado-premium.jpg">
+        <img src="assets/gallery/traslado-premium.jpg" alt="Vehículo deportivo trasladado con seguridad" loading="lazy">
+        <div class="gallery-label">Traslado premium</div>
+      </div>
     </div>
   </div>
 </section>
 
 <section id="cobertura" class="section">
   <div class="section-inner cov-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center;">
-    <div style="display: flex; flex-direction: column; gap: 20px;">
+    <div class="reveal" style="display: flex; flex-direction: column; gap: 20px;">
       <div class="eyebrow">Cobertura</div>
       <h2 style="font-size: 38px; color: var(--ink); line-height: 1.05;">Toda la Ciudad Autónoma de Buenos Aires y el Gran Buenos Aires</h2>
       <p style="font-size: 17px; color: var(--muted); line-height: 1.55;">Con base en Barracas, salimos hacia cualquier barrio de CABA y las zonas del conurbano bonaerense. Contanos dónde estás y coordinamos el auxilio o la grúa más cercana.</p>
@@ -306,8 +347,12 @@ button{font-family:inherit}
         <a href="https://wa.me/5491132708968?text=Hola!%20Necesito%20un%20servicio%20de%20auxilio%20o%20remolque." target="_blank" rel="noopener" class="btn btn-primary">Consultar mi zona</a>
       </div>
     </div>
-    <div style="position: relative; border-radius: 20px; overflow: hidden; border: 1px solid var(--line); min-height: 360px;">
-      <img src="assets/mapa-caba.png" alt="Mapa de la Ciudad Autónoma de Buenos Aires con la base de El 142 Auxilios marcada en Barracas" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+    <div class="reveal" style="position: relative; border-radius: 20px; overflow: hidden; border: 1px solid var(--line); min-height: 360px;">
+      <img src="assets/mapa-caba-zona.png" alt="Mapa de la Ciudad Autónoma de Buenos Aires con la zona de cobertura de El 142 Auxilios delimitada y la base marcada en Barracas" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+      <div style="position: absolute; top: 14px; left: 14px; background: rgba(255,255,255,.92); border-radius: 100px; padding: 6px 14px; font-size: 12px; font-weight: 800; color: var(--red); display: flex; align-items: center; gap: 6px;">
+        <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--red); display: inline-block;"></span>
+        Zona de cobertura CABA
+      </div>
       <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 10px 14px; background: linear-gradient(transparent, rgba(0,0,0,.55)); text-align: right; font-size: 11px; color: rgba(255,255,255,.85); font-weight: 600;">Mapa: © colaboradores de OpenStreetMap</div>
     </div>
   </div>
@@ -321,9 +366,9 @@ button{font-family:inherit}
       <p style="margin-top: 16px; font-size: 16px; color: var(--muted); line-height: 1.5;">Opiniones reales de nuestra ficha de Google, cada una respondida personalmente por El 142 Auxilios.</p>
     </div>
 
-    <div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: stretch; margin-bottom: 32px;">
+    <div class="reveal" style="display: flex; flex-wrap: wrap; gap: 24px; align-items: stretch; margin-bottom: 32px;">
       <div style="background: var(--ink); border-radius: 16px; padding: 32px; color: #fff; display: flex; flex-direction: column; gap: 14px; min-width: 220px; flex: 0 0 auto;">
-        <div style="font-family: 'Anton', sans-serif; font-size: 56px; line-height: 1;">4.9</div>
+        <div id="rating-count" data-target="4.9" style="font-family: 'Anton', sans-serif; font-size: 56px; line-height: 1;">0.0</div>
         <div style="position: relative; width: 140px; height: 24px;">
           <div style="position: absolute; inset: 0; display: flex; gap: 4px;">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="rgba(255,255,255,.25)"><path d="M12 2l2.9 6.9 7.1.6-5.4 4.7 1.7 7-6.3-3.9-6.3 3.9 1.7-7L1.9 9.5l7.1-.6z"/></svg>
@@ -447,7 +492,7 @@ button{font-family:inherit}
       <div class="eyebrow">Preguntas frecuentes</div>
       <h2 style="font-size: 40px; margin-top: 10px; color: var(--ink);">Antes de escribirnos</h2>
     </div>
-    <div style="display: flex; flex-direction: column; gap: 12px;">
+    <div class="reveal" style="display: flex; flex-direction: column; gap: 12px;">
 
       <div class="card faq-item is-open">
         <button class="faq-toggle" style="width: 100%; text-align: left; background: none; border: none; padding: 20px 22px; display: flex; align-items: center; justify-content: space-between; gap: 16px; cursor: pointer;">
@@ -495,7 +540,7 @@ button{font-family:inherit}
 
 <section style="background: var(--red); position: relative; overflow: hidden;" class="section">
   <div style="position: absolute; inset: 0; opacity: .5; background-image: repeating-linear-gradient(-32deg, transparent 0 54px, rgba(255,255,255,0.08) 54px 60px);"></div>
-  <div class="section-inner" style="position: relative; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 22px;">
+  <div class="section-inner reveal" style="position: relative; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 22px;">
     <h2 style="font-size: 42px; color: #fff; max-width: 640px;">¿Te quedaste varado ahora mismo?</h2>
     <p style="color: rgba(255,255,255,.9); font-size: 18px; max-width: 520px;">Escribinos y coordinamos el auxilio o la grúa en minutos, en cualquier punto de CABA y el GBA.</p>
     <div style="display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; padding-top: 8px;">
@@ -508,37 +553,35 @@ button{font-family:inherit}
   </div>
 </section>
 
-<footer style="background: var(--ink); padding: 56px 32px 32px;">
-  <div class="section-inner" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px; padding-bottom: 32px; border-bottom: 1px solid rgba(255,255,255,.12);">
+<footer style="background: #fff; padding: 56px 32px 32px; border-top: 1px solid var(--line);">
+  <div class="section-inner reveal" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px; padding-bottom: 32px; border-bottom: 1px solid var(--line);">
     <div style="display: flex; flex-direction: column; gap: 16px; max-width: 320px;">
-      <div style="background: #fff; border-radius: 12px; padding: 10px 16px; display: inline-flex; align-self: flex-start;">
-        <img src="assets/logo.png" alt="El 142 Auxilios" style="height: 40px; width: auto; display: block;">
-      </div>
-      <p style="color: rgba(255,255,255,.6); font-size: 14px; line-height: 1.5;">Servicio de auxilio vial y remolque con base en Barracas, para toda la Ciudad Autónoma de Buenos Aires y el Gran Buenos Aires.</p>
-      <a href="https://instagram.com/el142auxilios" target="_blank" rel="noopener" style="color: rgba(255,255,255,.6); font-size: 14px; font-weight: 700;">@el142auxilios</a>
+      <img src="assets/logo-transparent.png" alt="El 142 Auxilios" style="height: 76px; width: auto; display: block;">
+      <p style="color: var(--muted); font-size: 14px; line-height: 1.5;">Servicio de auxilio vial y remolque con base en Barracas, para toda la Ciudad Autónoma de Buenos Aires y el Gran Buenos Aires.</p>
+      <a href="https://instagram.com/el142auxilios" target="_blank" rel="noopener" style="color: var(--red); font-size: 14px; font-weight: 700; transition: color .2s ease;">@el142auxilios</a>
     </div>
     <div style="display: flex; flex-direction: column; gap: 12px;">
-      <div style="color: #fff; font-weight: 800; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 4px;">Contacto</div>
-      <a href="tel:+541132708968" style="color: rgba(255,255,255,.7); font-size: 14.5px;">11 3270-8968</a>
-      <a href="https://wa.me/5491132708968?text=Hola!%20Necesito%20un%20servicio%20de%20auxilio%20o%20remolque." target="_blank" rel="noopener" style="color: rgba(255,255,255,.7); font-size: 14.5px;">WhatsApp: 11 3270-8968</a>
-      <span style="color: rgba(255,255,255,.7); font-size: 14.5px;">Azara 100, C1267 — Barracas, CABA</span>
+      <div style="color: var(--ink); font-weight: 800; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 4px;">Contacto</div>
+      <a href="tel:+541132708968" style="color: var(--muted); font-size: 14.5px;">11 3270-8968</a>
+      <a href="https://wa.me/5491132708968?text=Hola!%20Necesito%20un%20servicio%20de%20auxilio%20o%20remolque." target="_blank" rel="noopener" style="color: var(--muted); font-size: 14.5px;">WhatsApp: 11 3270-8968</a>
+      <span style="color: var(--muted); font-size: 14.5px;">Azara 100, C1267 — Barracas, CABA</span>
     </div>
     <div style="display: flex; flex-direction: column; gap: 12px;">
-      <div style="color: #fff; font-weight: 800; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 4px;">Servicio</div>
-      <a href="#servicios" style="color: rgba(255,255,255,.7); font-size: 14.5px;">Acarreo y remolque</a>
-      <a href="#servicios" style="color: rgba(255,255,255,.7); font-size: 14.5px;">Auxilio mecánico</a>
-      <a href="#servicios" style="color: rgba(255,255,255,.7); font-size: 14.5px;">Traslado de livianos</a>
-      <span style="color: rgba(255,255,255,.7); font-size: 14.5px;">Atención las 24 horas</span>
+      <div style="color: var(--ink); font-weight: 800; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 4px;">Servicio</div>
+      <a href="#servicios" style="color: var(--muted); font-size: 14.5px;">Acarreo y remolque</a>
+      <a href="#servicios" style="color: var(--muted); font-size: 14.5px;">Auxilio mecánico</a>
+      <a href="#servicios" style="color: var(--muted); font-size: 14.5px;">Traslado de livianos</a>
+      <span style="color: var(--muted); font-size: 14.5px;">Atención las 24 horas</span>
     </div>
   </div>
   <div class="section-inner" style="padding-top: 24px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px;">
-    <span style="color: rgba(255,255,255,.45); font-size: 13px;">© 2026 El 142 Auxilios</span>
-    <span style="color: rgba(255,255,255,.45); font-size: 13px;">Ciudad Autónoma de Buenos Aires y alrededores</span>
+    <span style="color: var(--muted); font-size: 13px;">© 2026 El 142 Auxilios</span>
+    <span style="color: var(--muted); font-size: 13px;">Ciudad Autónoma de Buenos Aires y alrededores</span>
   </div>
 </footer>
 
-<a href="https://wa.me/5491132708968?text=Hola!%20Necesito%20un%20servicio%20de%20auxilio%20o%20remolque." target="_blank" rel="noopener" aria-label="Escribir por WhatsApp" style="position: fixed; right: 24px; bottom: 24px; z-index: 60; width: 60px; height: 60px; border-radius: 50%; background: var(--red); display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 24px rgba(0,0,0,.28);">
-  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+<a href="https://wa.me/5491132708968?text=Hola!%20Necesito%20un%20servicio%20de%20auxilio%20o%20remolque." target="_blank" rel="noopener" aria-label="Escribir por WhatsApp" class="wa-float" style="position: fixed; right: 24px; bottom: 24px; z-index: 60; width: 64px; height: 64px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+  <img src="assets/WhatsApp_icon.png" alt="" style="width: 100%; height: 100%; display: block; filter: drop-shadow(0 8px 18px rgba(0,0,0,.35));">
 </a>
 
 <div id="lightbox">
@@ -549,6 +592,41 @@ button{font-family:inherit}
 </div>
 
 <script>
+// Scroll-reveal animations
+var revealIO = new IntersectionObserver(function (entries) {
+  entries.forEach(function (entry) {
+    if (entry.isIntersecting) entry.target.classList.add('is-visible');
+  });
+}, { threshold: 0.15 });
+document.querySelectorAll('.reveal, .reveal-stagger').forEach(function (el) { revealIO.observe(el); });
+
+// Sticky header shadow on scroll
+var siteHeader = document.getElementById('site-header');
+window.addEventListener('scroll', function () {
+  siteHeader.classList.toggle('is-scrolled', window.scrollY > 10);
+}, { passive: true });
+
+// Count-up rating number
+var ratingEl = document.getElementById('rating-count');
+var ratingAnimated = false;
+var ratingIO = new IntersectionObserver(function (entries) {
+  entries.forEach(function (entry) {
+    if (!entry.isIntersecting || ratingAnimated) return;
+    ratingAnimated = true;
+    var target = parseFloat(ratingEl.getAttribute('data-target'));
+    var duration = 900;
+    var start = performance.now();
+    function step(now) {
+      var t = Math.min(1, (now - start) / duration);
+      var eased = 1 - Math.pow(1 - t, 3);
+      ratingEl.textContent = (target * eased).toFixed(1);
+      if (t < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  });
+}, { threshold: 0.3 });
+if (ratingEl) ratingIO.observe(ratingEl);
+
 document.querySelectorAll('.faq-item').forEach(function (item) {
   item.querySelector('.faq-toggle').addEventListener('click', function () {
     var wasOpen = item.classList.contains('is-open');
