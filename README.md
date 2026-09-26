@@ -10,7 +10,6 @@ Sitio 100% estático (HTML + CSS + JS vanilla), sin build ni dependencias — se
 index.html            página completa
 assets/logo.png        logo de la empresa
 assets/gallery/         fotos reales de los móviles en servicio
-img/                    fotos originales sin procesar (no se publican en el sitio)
 ```
 
 ## Editar contenido
